@@ -116,7 +116,7 @@ app.get("/api/documents/:id", requireSession, (req, res) => {
 app.get("/api/health", (_, res) => res.json({ status: "ok" }));
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const distDir = path.resolve(__dirname, "../../client/dist");
+const distDir = path.resolve(__dirname, "../dist");
 
 app.use(express.static(distDir));
 
